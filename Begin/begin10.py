@@ -1,0 +1,5 @@
+a = float(input("Birinchi son:"))
+b = float(input("Ikkinchi son:"))
+print(a+b)
+print(a*b)
+print(a**2,b**2)
