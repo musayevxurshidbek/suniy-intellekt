@@ -1,6 +1,5 @@
 x = float(input("X = "))
 a = float(input("A = "))
 y = float(input("Y = "))
-b = a / x
-y = b * y
-print(b, y)
+b = float(input("B = "))
+print(a/x, b/y)
