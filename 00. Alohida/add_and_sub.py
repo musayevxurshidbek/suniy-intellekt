@@ -41,15 +41,14 @@ def main():
         mahraj_res = mul_x_y(mahraj_a, surat_b)
 
     butun, qoldiq = x_div_mod_y(surat_res, mahraj_res)
-    kasr = ""
+    kasr = 0
     hona = 0
     while qoldiq != 0 and hona != 10:
         surat_res = mul_x_y(qoldiq, 10)
         k, qoldiq = x_div_mod_y(surat_res, mahraj_res)
-        kasr += str(k)
+        kasr = mul_x_y(kasr,10) + k
         hona += 1
-    if kasr == "":
-        kasr = "0"
+
     if ishora:
         print("-", end="")
     print(butun, kasr, sep=".")
