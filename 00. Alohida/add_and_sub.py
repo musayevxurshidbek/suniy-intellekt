@@ -20,13 +20,14 @@ def main():
         mahraj_a += 1
     surat_a = int(surat_a)
     surat_a, mahraj_a = qisqartir(surat_a, mahraj_a, ekub(surat_a, mahraj_a))
+    print(surat_a, mahraj_a,sep="/")
     # b sonini kasrga aylantirish
     while surat_b != int(surat_b):
         surat_b += b
         mahraj_b += 1
     surat_b = int(surat_b)
     surat_b, mahraj_b = qisqartir(surat_b, mahraj_b, ekub(surat_b, mahraj_b))
-
+    print(surat_b, mahraj_b, sep="/")
     if amal == 1:
         # ko'paytirish
         surat_a, mahraj_b = qisqartir(surat_a, mahraj_b, ekub(surat_a, mahraj_b))
@@ -43,15 +44,26 @@ def main():
     butun, qoldiq = x_div_mod_y(surat_res, mahraj_res)
     kasr = 0
     hona = 0
-    while qoldiq != 0 and hona != 10:
+    while qoldiq != 0 and hona != 7:
+        hona += 1
         surat_res = mul_x_y(qoldiq, 10)
         k, qoldiq = x_div_mod_y(surat_res, mahraj_res)
         kasr = mul_x_y(kasr,10) + k
-        hona += 1
 
+    kasr //= 10
+    if k > 5 and hona > 6:
+        kasr +=1
+
+    x = 1e-1 if hona == 1 else 1e-2 if hona == 2 else 1e-3 if hona == 3 else 1e-4 if hona == 4 else 1e-5 if hona == 5 else 1e-6
+    son_kasr = 0
+    for _ in range(0,kasr):
+        son_kasr += x
+
+    son = butun + son_kasr
     if ishora:
-        print("-", end="")
-    print(butun, kasr, sep=".")
+        son = -son
+
+    print(son)
 
 
 def ekub(n, m):
