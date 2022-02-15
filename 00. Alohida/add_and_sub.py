@@ -20,14 +20,14 @@ def main():
         mahraj_a += 1
     surat_a = int(surat_a)
     surat_a, mahraj_a = qisqartir(surat_a, mahraj_a, ekub(surat_a, mahraj_a))
-    print(surat_a, mahraj_a, sep="/")
+    # print(surat_a, mahraj_a, sep="/")
     # b sonini kasrga aylantirish
     while surat_b != int(surat_b):
         surat_b += b
         mahraj_b += 1
     surat_b = int(surat_b)
     surat_b, mahraj_b = qisqartir(surat_b, mahraj_b, ekub(surat_b, mahraj_b))
-    print(surat_b, mahraj_b, sep="/")
+    # print(surat_b, mahraj_b, sep="/")
     if amal == 1:
         # ko'paytirish
         surat_a, mahraj_b = qisqartir(surat_a, mahraj_b, ekub(surat_a, mahraj_b))
