@@ -4,4 +4,4 @@ S = 1
 while S<=n:
     k+=1
     S+=k
-print(k,S)
+print(k-1,S-k)
