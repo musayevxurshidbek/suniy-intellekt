@@ -7,7 +7,7 @@ def minglik(x):
     a1 = x // 100
     a2 = x % 100 // 10
     a3 = x % 10
-    s = 0
+    s = ''
     if a1 > 0:
         s = b[a1] + 'yuz '
     s += u[a2]
